@@ -20,12 +20,16 @@ function saveToDo(){
 function paintToDo(todo){
   const li = document.createElement("li")
   li.id = todo.id;
-  const span = document.createElement("span");
-  span.innerText=todo.content;
+  const checkbox = document.createElement("input");
+  checkbox.type="checkbox";
+  const label = document.createElement("label");
+  label.appendChild(checkbox);
+  label.append(todo.content);
   const button = document.createElement("button");
   button.addEventListener("click", deleteToDo);
   button.innerText="x";
-  li.appendChild(span);
+
+  li.appendChild(label);
   li.appendChild(button);
   todoList.appendChild(li);
 }

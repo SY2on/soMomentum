@@ -15,8 +15,21 @@ if ( username == null ){
   paintingGreeting();
 }
 
+function getHours(date){
+  h=date.getHours();
+  if( h>=5 && h<12){
+    return "mornig";
+  } else if ( h>=12 && h<17){
+    return "afternoon";
+  }else if (h>=17 && h<21){
+    return "evening";
+  }else{
+    return "night";
+  }
+}
+
 function paintingGreeting(){
-  greeting.innerText=`hello, ${username}`
+  greeting.innerText=`Good ${getHours(new Date())}, ${username}`
 }
 
 function loginFunc(){

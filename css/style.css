@@ -1,27 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500&display=swap');
 
 
-@import  url("clock.css");
-@import  url("background.css");
+@import  url("center.css");
 
 body{
   margin:0;
+  height: 100vh;
+  width:100vw;
   color:white;
   font-family: 'Hahmlet';
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.hidden{
-  display: none;
-}
-/* .bg{
-  
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  position:absolute;
-  top:0;
-} */
+
 input{
   background-color:inherit;
   border: none;
@@ -32,40 +21,15 @@ main{
   align-items: center;
   flex-direction: column;
 }
+input:focus{
+  outline: none;
+}
 .clock{
   text-align: center;
   font-weight:400;
   font-size: 140px;
 }
-.main{
-  display: flex;
-  flex-direction: column;
-}
-.greeting{
-  text-align: center;
-  font-weight:400;
-  font-size: 45px;
-}
-.todo-input{
-  display: flex;
-  flex-direction: column;
-}
-.todo-input span{
-  text-align: center;
-  font-weight:400;
-  font-size: 30px;
-}
 
-.todo-typing {
-  border-bottom: 2px solid white;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-
-}
-.todo-typing:focus{
-  outline: none;
-}
 .top-row{
   display: flex;
   justify-content: space-between;
@@ -74,4 +38,7 @@ main{
   display: flex;
   flex-direction: column;
   padding: 20px;
+}
+.hidden{
+  display: none;
 }
